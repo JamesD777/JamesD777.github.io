@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<link rel="stylesheet" href="index.css" />
+	<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow'>
+	
+    <head>
+		 
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+		<div id="desc">
+			
+			<h > James Dunlap Facts </h>
+			
+		</div>
+		
+		<div class="facts">
+			<h1 id="fact">fact</h1>
+			<a href="#" onclick="nextfact()">Next</a>
+		</div>
+         
+		<script type="text/javascript">
+			
+			var facts = [
+				"James is a Freshman in college, soon to be a sophmore!",
+"James is currently helping build a website and set up a database for the non-profit math tutoring service IntelliChoice",
+"James knows many languages but likes to focus on C++, C, and Java.",
+"James currently has above a 3.7 GPA and is earning his Bachelors in Computer Science at the University of Texas at Dallas.",
+"You can contact James at JCD160230@utdallas.edu" ,
+"James aspires to work in the CS field for 25-30yrs before going back to college for a teaching degree to teach CS to kids.",
+"James is a proud member of many organizations at UTD, including VEXU Robotics, ACM, and PRIDE",
+"James has volunteered numerous times with FIRST robotics and the Austin Nature and Science Center while trying to promote STEM fields to kids.",
+			];
+			
+			var factsContainer = document.getElementById('fact');
+			factsContainer.innerHTML = facts[Math.floor(Math.random() * facts.length)];
+			function nextfact() {
+				factsContainer.innerHTML = facts[Math.floor(Math.random() * facts.length)];
+			}
+		</script>
+
+
+    </body>
+</html>
